@@ -1,6 +1,30 @@
-# Go Backend Starter Kit V.1.0.0
+# Pasar Desa — BUMDes Digital Marketplace API
 
-A production-ready and modular Go backend starter kit built with clean architecture principles. Designed for scalability, maintainability, and quick project setup.
+[![Go Version](https://img.shields.io/badge/Go-1.22+-00ADD8?style=flat&logo=go)](https://golang.org/) [![Architecture](https://img.shields.io/badge/Architecture-Clean%20Architecture-blue)](#) [![Status](https://img.shields.io/badge/Status-In%20Development-yellow)](#)
+
+A scalable RESTful backend service engineered to digitize local village-owned enterprise (BUMDes) commerce and local food vendors.
+
+---
+
+## 📌 Background & Problem Statement
+
+In many rural areas, major food delivery and marketplace platforms do not operate due to geographical and logistics constraints. To bridge this gap, local villagers and small business owners rely on WhatsApp groups to buy and sell home-cooked meals, daily produce, and local goods.
+
+However, as the merchant base grows daily, relying on WhatsApp creates severe operational bottlenecks:
+- **Information Overload:** High message volume causes product listings and order messages to get buried quickly.
+- **Unstructured Inventory & Catalog:** No centralized place for local merchants to showcase products or manage daily stock.
+- **Order Inefficiency:** Absence of structured ordering leads to missed transactions and poor tracking.
+
+---
+
+## 💡 The Solution
+
+**Pasar Desa** solves this by providing a lightweight, structured digital marketplace platform tailored for village enterprises (BUMDes) and local vendors:
+- **Centralized Product Showcase:** Replaces chaotic group chats with a structured catalog for local vendors and food merchants.
+- **Streamlined Order Flow:** Automates order creation and inventory tracking so merchants never miss an order.
+- **Empowering Local Community:** Drives the village economy while keeping order flows simple and manageable.
+
+---
 
 ## 🚀 Features
 
@@ -11,9 +35,7 @@ A production-ready and modular Go backend starter kit built with clean architect
 - **Authentication**: JWT-based authentication featuring access token, refresh token workflows, and session revocation.
 - **Email Delivery**: Automated email verification system with time-limited tokens sent via SMTP.
 - **Configuration**: Centralized configuration management using [Viper](https://github.com/spf13/viper).
-- **Security & Access Control**:
-  - **Role-Based Access Control (RBAC)** powered by Casbin for fine-grained permissions
-  - **Rate Limiting** backed by Redis to prevent API abuse and brute-force attacks HttpOnly Cookie protection for sensitive tokens
+- **Security & Validation**: Request validation and structured logging integrated out of the box.
 
 ## 🛠️ Tech Stack
 
@@ -26,56 +48,11 @@ A production-ready and modular Go backend starter kit built with clean architect
 - **Dependency Injection**: Google Wire
 - **Configuration**: Viper
 - **Email Service**: SMTP
-- **Role Based Access Control(RBAC)**: Casbin
-
-## 📦 Getting Started
 
 ### Prerequisites
 
 - [Go](https://golang.org/doc/install) (v1.27)
 - [MySQL](https://www.mysql.com/) database server
-
-### Installation
-
-1. **Clone the repository**
-
-   ```bash
-   git clone [https://github.com/](https://github.com/)<your-username>/<your-repo-name>.git
-   cd <your-repo-name>
-
-   ```
-
-2. **Setup environment variables**
-   ```bash
-   cp .env.example .env
-   ```
-3. **Install dependencies**
-   ```bash
-   go mod download
-   ```
-4. **Run Database Migrations**
-   ```bash
-   make migrate-up
-   ```
-5. **Run the Application**
-   ```bash
-   make run
-   ```
-
-## 🛠️ Useful Commands (Makefile)
-
-## 🛠️ Useful Commands (Makefile)
-
-This project includes a `Makefile` to simplify common commands. Run the following commands in your terminal:
-
-- **`make dev`** - Run the application directly in development mode.
-- **`make build`** - Compile the Go code into an executable binary inside the `bin/` directory.
-- **`make run`** - Compile and execute the binary file.
-- **`make wire`** - Regenerate dependency injection code (`wire_gen.go`).
-- **`make migrate-up`** - Run database schema migrations.
-- **`make migrate-down`** - Rollback the last database migration.
-- **`make test`** - Run all unit tests within the repository.
-- **`make clean`** - Remove build binaries and temporary test artifacts.
 
 ---
 
@@ -92,5 +69,4 @@ This project includes a `Makefile` to simplify common commands. Run the followin
   <img src="https://img.shields.io/badge/Google_Wire-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Wire" />
   <img src="https://img.shields.io/badge/Viper-5A29E4?style=for-the-badge&logo=go&logoColor=white" alt="Viper" />
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/Casbin-FF4500?style=for-the-badge&logo=security&logoColor=white" alt="Casbin" />
 </p>
